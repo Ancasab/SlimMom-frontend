@@ -1,0 +1,73 @@
+@import 'stylesheet/_mixins.scss';
+@import 'stylesheet/_vars.scss';
+
+.navigation__list {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: bold;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: 0.04em;
+  gap: 20px;
+  flex-grow: 1;
+
+  @media screen and (max-width: 767px) {
+    align-items: center;
+  }
+  @media screen and (min-width: 1280px) {
+    top: 131px;
+  }
+}
+
+.container {
+  width: $mobile;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.wrapper {
+  @include centeredFlex($jusCon: flex-end);
+  flex-grow: 1;
+  gap: 2px;
+
+  padding: 12px 0;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+
+  z-index: 1;
+
+  @include tablet-media {
+    position: static;
+    margin-right: 48px;
+  }
+
+  @include desktop-media {
+    margin-right: 0;
+    padding: 0;
+  }
+}
+
+.line {
+  border-bottom: 1px solid $decorLine;
+  transform: rotate(90deg);
+  width: 32px;
+}
+
+.active {
+  color: $secondaryTextColor;
+}
+
+.default {
+  color: inherit;
+
+  &:hover {
+    color: $accentTextColor;
+    transition: $animation;
+  }
+}

@@ -1,0 +1,80 @@
+@import 'stylesheet/_mixins.scss';
+@import 'stylesheet/_vars.scss';
+
+.blockWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include tablet-only-media {
+    flex-direction: row;
+    gap: 100px;
+  }
+  @include desktop-media {
+    flex-direction: column;
+    gap: 100px;
+  }
+}
+
+.heading {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  letter-spacing: 0.04em;
+  color: $secondaryTextColor;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  width: 100%;
+
+  font-weight: 400;
+
+  @include tablet-media {
+    width: 270px;
+  }
+}
+
+.foodList {
+  composes: list;
+
+  height: 112px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar-track {
+    background-color: darken($secondaryBgnColor, 7%);
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar {
+    max-width: 6px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $mobileMenuBgnColor;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $mobileMenuBgnColor;
+  }
+}
+
+.calorieItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.warning {
+  color: red;
+}
+
+.norm {
+  color: green;
+}

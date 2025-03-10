@@ -1,0 +1,41 @@
+@import 'stylesheet/_mixins.scss';
+@import 'stylesheet/_vars.scss';
+
+.filteredList {
+  padding-left: 5px;
+  height: 220px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-bottom: 60px;
+
+  @include tablet-media {
+    max-width: 610px;
+    max-height: 260px;
+    margin-bottom: 55px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar {
+    max-width: 6px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $mobileMenuBgnColor;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $mobileMenuBgnColor;
+  }
+}
+
+.notification {
+  @media screen and (max-width: 1279px) {
+    padding-bottom: 60px;
+  }
+}

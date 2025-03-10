@@ -1,0 +1,191 @@
+@import 'stylesheet/_mixins.scss';
+@import 'stylesheet/_vars.scss';
+
+.overlay {
+  position: fixed;
+  top: 73px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(33, 33, 33, 0.12);
+  z-index: 1200;
+
+  @include tablet-media {
+    top: 0;
+  }
+}
+
+.btnContainer {
+  background-color: $secondaryBgnColor;
+  width: 100%;
+}
+
+.modal {
+  position: absolute;
+  top: 37px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $mainBgnColor;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 40px;
+  }
+
+  @include tablet-media {
+    max-width: 672px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 64px 82px;
+    height: 572px;
+  }
+}
+
+.title {
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  margin-bottom: 42px;
+  color: $secondaryTextColor;
+
+  @include tablet-media {
+    font-size: 26px;
+    line-height: calc(36 / 26);
+    margin-bottom: 20px;
+  }
+}
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 320px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet-media {
+    width: 330px;
+    padding: 0;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: -27px;
+  left: calc((100vw - 280px) / 2);
+
+  height: 20px;
+  width: 20px;
+
+  color: black;
+
+  &:hover {
+    color: $accentBgnColor;
+  }
+}
+
+.closeIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: $animation;
+  }
+}
+
+.caloriesContainer {
+  border-bottom: 1px solid $decorLine;
+  margin-bottom: 20px;
+  margin-left: 89px;
+  margin-right: 89px;
+  padding-bottom: 32px;
+  width: 100%;
+
+  @include tablet-media {
+    margin-bottom: 12px;
+  }
+}
+
+.calories {
+  font-weight: 700;
+  font-size: 48px;
+  color: $darkTextColor;
+  display: block;
+  text-align: center;
+  line-height: calc(57 / 48);
+}
+
+.caloriesText {
+  text-align: center;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+}
+
+.secondaryTitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  margin-bottom: 20px;
+  text-align: center;
+  color: $secondaryTextColor;
+}
+
+.btn {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.list {
+  height: 130px;
+  margin-bottom: 40px;
+  display: flex;
+
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar-track {
+    background-color: $secondaryBgnColor;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar {
+    max-width: 6px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $mobileMenuBgnColor;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $mobileMenuBgnColor;
+  }
+}
+
+.listItem {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  letter-spacing: 0.04em;
+  color: $mainTextColor;
+}
+
+.btnWrap {
+  display: flex;
+  justify-content: center;
+}

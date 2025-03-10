@@ -1,0 +1,91 @@
+@import 'stylesheet/_mixins.scss';
+@import 'stylesheet/_vars.scss';
+
+.nav {
+  @include centeredFlex($jusCon: space-between);
+  padding: 30px 0px 26px;
+
+  @include desktop-media {
+    padding: 0;
+  }
+}
+
+.menu {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.menu svg {
+  width: 24px;
+  height: 24px;
+}
+
+.menu svg:hover {
+  transform: scale(1.2);
+  color: $accentTextColor;
+  transition: $animation;
+}
+
+.link {
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $mainTextColor;
+  transition: $animation;
+
+  &:hover {
+    color: $accentTextColor;
+    transition: $animation;
+  }
+}
+
+.active {
+  color: $lightTextColor;
+
+  @include desktop-media {
+    color: $secondaryTextColor;
+  }
+}
+
+.regList {
+  @include centeredFlex($jusCon: flex-end);
+  gap: 14px;
+
+  @include tablet-media {
+    gap: 24px;
+  }
+
+  @include desktop-media {
+    margin-left: 16px;
+  }
+}
+
+.regLink {
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $mainTextColor;
+  transition: $animation;
+
+  &:hover {
+    color: $accentTextColor;
+    transition: $animation;
+  }
+}
+
+.activeReg {
+  color: $secondaryTextColor;
+}
+
+.list {
+  @include desktop-media {
+    display: flex;
+    gap: 24px;
+    margin-left: 20px;
+  }
+}

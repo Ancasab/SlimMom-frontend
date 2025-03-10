@@ -1,0 +1,53 @@
+@import 'stylesheet/_mixins.scss';
+@import 'stylesheet/_vars.scss';
+
+.calendar_box {
+  // @include to-tablet-media {
+  //   margin-top: 80px;
+  // }
+  margin-top: 80px;
+  @include tablet-media {
+    margin-top: 0;
+  }
+}
+
+input[type='date'] {
+  background: transparent;
+  color: white;
+}
+
+input[type='date']::-webkit-datetime-edit-day-field {
+  background: transparent;
+  color: green;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  background: transparent;
+  font-size: 30px;
+}
+
+.inputCalendar {
+  font-size: 18px !important;
+  border: none;
+  outline: none;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  background-color: transparent;
+  padding: 3px 5px;
+  width: 190px;
+  background: transparent;
+  margin-bottom: 32px;
+
+  @include tablet-media {
+    font-size: 34px !important;
+    width: 290px;
+    margin-bottom: 60px;
+    margin-top: 100px;
+  }
+
+  @include desktop-media {
+    margin-top: 147px;
+  }
+}

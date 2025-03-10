@@ -1,0 +1,49 @@
+@import 'stylesheet/_mixins.scss';
+@import 'stylesheet/_vars.scss';
+
+
+
+.page_container{
+  width: 100px;
+}
+
+.container_ {
+  padding: 80px 0 60px;
+
+  @include tablet-media {
+    padding: 100px 32px 55px;
+  }
+
+  @include desktop-media {
+    padding: 147px 0 55px;
+  }
+}
+
+.btn {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 60px;
+  border-radius: 50%;
+  border: none;
+  color: $mainBgnColor;
+  background: $accentBgnColor;
+
+  &:hover,
+  &:focus {
+    box-shadow: $boxShadow;
+  }
+}
+
+.btnDisable {
+  composes: btn;
+  background-color: lighten($accentBgnColor, 10%);
+  cursor: auto;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.wrapperBtn {
+  text-align: center;
+}
