@@ -1,4 +1,6 @@
-@import './stylesheet/fonts';
-@import './stylesheet/vars';
-@import './stylesheet/mixins';
-@import './stylesheet/base';
+@use './stylesheet/fonts';
+// @import './stylesheet/vars';
+// @import './stylesheet/mixins';
+@use './stylesheet/base';
+@use 'stylesheet/vars' as *;
+@use 'stylesheet/mixins' as *;

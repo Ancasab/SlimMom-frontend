@@ -1,3 +1,6 @@
+@use 'stylesheet/vars' as *;
+@use 'stylesheet/mixins' as *;
+
 .loader {
   display: flex;
   align-items: center;

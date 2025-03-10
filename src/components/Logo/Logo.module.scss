@@ -1,5 +1,5 @@
-@import 'stylesheet/_mixins.scss';
-@import 'stylesheet/_vars.scss';
+@use 'stylesheet/vars' as *;
+@use 'stylesheet/mixins' as *;
 
 .wrapper {
   @include desktop-media {

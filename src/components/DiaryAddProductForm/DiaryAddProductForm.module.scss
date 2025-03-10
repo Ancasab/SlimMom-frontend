@@ -1,5 +1,5 @@
-@import 'stylesheet/_mixins.scss';
-@import 'stylesheet/_vars.scss';
+@use 'stylesheet/vars' as *;
+@use 'stylesheet/mixins' as *;
 
 .icon {
   width: 23px;
@@ -20,11 +20,9 @@
     margin-top: 0;
   }
 
-  @include desktop-media {
-  }
+  @include desktop-media {}
 
-  @include to-tablet-media {
-  }
+  @include to-tablet-media {}
 }
 
 .FieldProduct {
@@ -75,8 +73,8 @@
     border-color: #fc842d;
   }
 
-  &:focus ~ label,
-  &:valid ~ label {
+  &:focus~label,
+  &:valid~label {
     top: 0px;
   }
 }
@@ -130,8 +128,10 @@
   }
 }
 
+// The .btnDisable class inherits styles from .btn
 .btnDisable {
-  composes: btn;
+  @extend .btn; // Inherit styles from .btn
+
   background-color: lighten($accentBgnColor, 10%);
   cursor: auto;
 
@@ -201,10 +201,7 @@
   border-radius: 0;
 }
 
-.Form
-  :global
-  .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
-  .MuiOutlinedInput-notchedOutline {
+.Form :global .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
   border-bottom: 1px solid $activeDecorLine;
 }
 
@@ -220,6 +217,242 @@
 .Form :global .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
   color: $mainTextColor;
 }
+
+// MuiAutocomplete-root css-l3ln04-MuiAutocomplete-root  MuiFocused
+// MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root    MuiFocused
+// MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiAutocomplete-inputRoot css-md26zr-MuiInputBase-root-MuiOutlinedInput-root  Mui-disabled
+//MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputTypeSearch MuiAutocomplete-input MuiAutocomplete-inputFocused css-1g24dm6-MuiInputBase-input-MuiOutlinedInput-input
+//MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline
+//css-ihdtdm
+//notranslate
+
+//MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root-MuiInputLabel-root
+
+
+
+
+// @import 'stylesheet/_mixins.scss';
+// @import 'stylesheet/_vars.scss';
+
+// .icon {
+//   width: 23px;
+//   height: 23px;
+// }
+
+// .Form {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start !important;
+//   width: 100%;
+//   margin-top: 80px;
+//   margin-bottom: 69px;
+
+//   @include tablet-media {
+//     flex-direction: row;
+//     align-items: center;
+//     margin-top: 0;
+//   }
+
+//   @include desktop-media {
+//   }
+
+//   @include to-tablet-media {
+//   }
+// }
+
+// .FieldProduct {
+//   position: relative;
+//   width: 100%;
+
+//   @include tablet-media {
+//     margin-right: 22px;
+//     width: 240px;
+//   }
+// }
+
+// .FieldWeight {
+//   position: relative;
+//   width: 100%;
+//   margin-top: 32px;
+//   margin-bottom: 60px;
+
+//   @include tablet-media {
+//     margin-top: 0;
+//     margin-bottom: 0;
+//     margin-right: 87px;
+//     width: 107px;
+//   }
+
+//   @include desktop-media {
+//     margin-right: 60px;
+//   }
+// }
+
+// .Input {
+//   padding: 5px;
+//   line-height: normal;
+//   display: inline-block;
+//   height: 48px;
+//   width: 100%;
+//   border: none;
+//   border-bottom: 1px solid #e0e0e0;
+//   color: #212121;
+//   outline: none;
+
+//   @include tablet-media {
+//     margin-bottom: 0;
+//   }
+
+//   &:hover,
+//   &:focus {
+//     border-color: #fc842d;
+//   }
+
+//   &:focus ~ label,
+//   &:valid ~ label {
+//     top: 0px;
+//   }
+// }
+
+// .LabelWeight {
+//   left: 0;
+
+//   @include tablet-media {
+//     left: auto;
+//     right: 0;
+//   }
+// }
+
+// .LabelTitle {
+//   left: 0;
+// }
+
+// .InputWeight {
+//   @include tablet-media {
+//     text-align: right;
+//   }
+
+//   text-align: left;
+// }
+
+// .btnMobil {
+//   margin-bottom: 60px;
+// }
+
+// .Input::placeholder {
+//   position: relative;
+//   left: -5px;
+//   color: #9b9faa;
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: calc(17 / 14);
+//   padding-left: 5px;
+// }
+
+// .btn {
+//   width: 48px;
+//   height: 48px;
+//   border-radius: 50%;
+//   border: none;
+//   color: $mainBgnColor;
+//   background: $accentBgnColor;
+
+//   &:hover,
+//   &:focus {
+//     box-shadow: $boxShadow;
+//   }
+// }
+
+// .btnDisable {
+//   composes: btn;
+//   background-color: lighten($accentBgnColor, 10%);
+//   cursor: auto;
+
+//   &:hover {
+//     box-shadow: none;
+//   }
+// }
+
+// .btnWrap {
+//   width: 280px;
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .Form :global .MuiAutocomplete-root {
+//   width: 100%;
+
+//   @include tablet-media {
+//     width: 240px;
+//     margin-right: 22px;
+//   }
+
+//   @include desktop-media {
+//     margin-right: 48px;
+//   }
+// }
+
+// .Form :global .MuiInputBase-root {
+//   font-family: 'Verdana';
+//   font-weight: 400;
+//   font-size: 14px;
+//   line-height: calc(17 / 14);
+//   letter-spacing: 0.04em;
+//   color: $secondaryTextColor;
+
+//   height: 48px;
+// }
+
+// // .Form :global .css-l3ln04-MuiAutocomplete-root .MuiOutlinedInput-root {
+// //   padding: 5px;
+// // }
+
+// // .Form
+// //   :global
+// //   .css-l3ln04-MuiAutocomplete-root
+// //   .MuiOutlinedInput-root
+// //   .MuiAutocomplete-input {
+// //   padding: 0;
+// // }
+
+// .Form .FieldWeight :global .MuiInputBase-root {
+//   padding: 6px 9px 2px 9px;
+// }
+
+// .Form .FieldWeight :global .MuiInputBase-input {
+//   padding: 7.5px 4px 7.5px 6px;
+//   width: 100%;
+// }
+
+// .Form :global .MuiInputBase-input.Mui-disabled {
+//   background-color: $secondaryBgnColor;
+// }
+
+// .Form :global .MuiOutlinedInput-notchedOutline {
+//   border: none;
+//   border-bottom: 1px solid $decorLine;
+//   border-radius: 0;
+// }
+
+// .Form
+//   :global
+//   .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
+//   .MuiOutlinedInput-notchedOutline {
+//   border-bottom: 1px solid $activeDecorLine;
+// }
+
+// .Form :global .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+//   font-family: 'Verdana';
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: calc(17 / 14);
+//   letter-spacing: 0.04em;
+//   color: $mainTextColor;
+// }
+
+// .Form :global .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+//   color: $mainTextColor;
+// }
 
 // MuiAutocomplete-root css-l3ln04-MuiAutocomplete-root  MuiFocused
 // MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root    MuiFocused
