@@ -208,10 +208,11 @@ export const DailyCaloriesForm = ({ handleModalOpen }) => {
               </Button>
             </div>
 
-            <PersistFormikValues name="calc-form" />
+            {authStatus && <PersistFormikValues name="calc-form" />}
           </Form>
         )}
       </Formik>
     </>
   );
 };
+

@@ -4,8 +4,8 @@ import { store } from 'redux/store';
 import { resetToken } from 'redux/auth/authSlice';
 import { routes } from 'utils/routes';
 
+// axios.defaults.baseURL = 'https://slimmom-be-vtbp.onrender.com/api';
 axios.defaults.baseURL = 'https://slim-mom-backend-tf5k.onrender.com/api';
-
 // axios.defaults.baseURL =
 //   'https://slim-mom-backend-production.up.railway.app/api';
 
