@@ -1,8 +1,6 @@
 import { MagnifyingGlass } from 'react-loader-spinner';
 import React from 'react';
 import scss from './Loader.module.scss';
-
-
 export const Loader = () => {
   return (
     <div className={scss.loader}>

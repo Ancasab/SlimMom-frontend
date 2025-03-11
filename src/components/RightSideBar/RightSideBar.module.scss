@@ -1,5 +1,5 @@
-@use 'stylesheet/vars' as *;
-@use 'stylesheet/mixins' as *;
+@import 'stylesheet/_mixins.scss';
+@import 'stylesheet/_vars.scss';
 
 .blockWrapper {
   display: flex;
@@ -41,8 +41,7 @@
 }
 
 .foodList {
-  // composes: list;
-    @extend .list; // Inherit styles from .list
+  composes: list;
 
   height: 112px;
   overflow-y: scroll;

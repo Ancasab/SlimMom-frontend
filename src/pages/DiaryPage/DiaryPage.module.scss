@@ -1,5 +1,5 @@
-@use 'stylesheet/vars' as *;
-@use 'stylesheet/mixins' as *;
+@import 'stylesheet/_mixins.scss';
+@import 'stylesheet/_vars.scss';
 
 
 
@@ -35,8 +35,7 @@
 }
 
 .btnDisable {
-  // composes: btn;
-  @extend .btn;
+  composes: btn;
   background-color: lighten($accentBgnColor, 10%);
   cursor: auto;
 
