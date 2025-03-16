@@ -4,10 +4,10 @@ import { store } from 'redux/store';
 import { resetToken } from 'redux/auth/authSlice';
 import { routes } from 'utils/routes';
 
-// axios.defaults.baseURL = 'https://slimmom-be-vtbp.onrender.com/api';
-axios.defaults.baseURL = 'https://slim-mom-backend-tf5k.onrender.com/api';
+axios.defaults.baseURL = 'https://slimmom-be-vtbp.onrender.com/api';
+// axios.defaults.baseURL = 'https://slim-mom-backend-tf5k.onrender.com/api';
 // axios.defaults.baseURL =
-//   'https://slim-mom-backend-production.up.railway.app/api';
+//   'http://localhost:8080/api';
 
 export const setToken = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;

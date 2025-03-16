@@ -79,7 +79,7 @@ export const Modal = ({ onClose, isModalOpen }) => {
                     {notRecFood.length > 0 &&
                       notRecFood.map((el, i) => (
                         <li className={scss.listItem} key={i}>
-                          {i + 1}. {el.en}
+                          {i + 1}. {el}
                         </li>
                       ))}
                   </ul>

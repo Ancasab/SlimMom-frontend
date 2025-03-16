@@ -66,7 +66,7 @@ export const DiaryAddProductForm = () => {
           onChange={(e, v) => {
             setProduct(v);
           }}
-          options={searchedProduct.map(option => option.title.en)}
+          options={searchedProduct.map(option => option.title)}
           renderInput={params => (
             <TextField
               {...params}

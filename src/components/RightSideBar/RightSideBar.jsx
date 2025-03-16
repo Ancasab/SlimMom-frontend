@@ -58,7 +58,7 @@ export const RightSideBar = () => {
             {notRecFood && notRecFood.length > 0 ? (
               notRecFood.map((el, i) => (
                 <li key={i}>
-                  <span>{el.en}</span>
+                  <span>{el}</span>
                 </li>
               ))
             ) : (
