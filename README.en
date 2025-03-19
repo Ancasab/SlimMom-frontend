@@ -1,94 +1,128 @@
-# Model pentru un proiect React
+# SlimMom-frontend Application
 
-Acest proiect a fost creat cu ajutorul
-[Create React App](https://github.com/facebook/create-react-app). Pentru prezentări
-și configurarea de funcții suplimentare
-[consultă documentația](https://facebook.github.io/create-react-app/docs/getting-started).
+The application helps to keep track of the calories of the food eaten. Based on
+the data provided by the user, the appliction calculates the daily caloric
+intake and provides a list of products not recommended for consumption.
 
-## Crearea unui repository în baza modelului
+## Usage
 
-Utilizează acest repository al organizației GoIT ca model pentru crearea unui repository
-pentru proiectul tău. Pentru a face acest lucru, dă click pe "Use this template" și selectează opțiunea
-`Create a new repository`, după cum se prezintă în imagine.
+- follow the [link](https://ancasab.github.io/SlimMom-frontend/) to get started
+- fill out the form and click "Start losing weight"  
+   ![an example interface](./public/example1.jpg)
+- added a new product and its weight  
+  ![an example interface](./public/example2.jpg)
+
+## Created with
+
+:white_check_mark: React  
+:white_check_mark: Redux Toolkit  
+:white_check_mark: HTML  
+:white_check_mark: SASS  
+:white_check_mark: Webpack  
+:white_check_mark: REST API
+
+# React template
+
+This project was created with
+[Create React App](https://github.com/facebook/create-react-app). To get
+acquainted and configure additional features
+[refer to documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+## Creating a repository by template
+
+Use this GoIT repository as a template for creating a repository of your
+project. To use it just tap the `«Use this template»` button and choose
+`«Create a new repository»` option, as you can see on the image below.
 
 ![Creating repo from a template step 1](./assets/template-step-1.png)
 
-Următorul pas va deschide pagina de creare a unui nou repository. Completează câmpul
-pentru numele acestuia, asigură-te că repository-ul este public, apoi dă click pe `Create repository from template`.
+The page for creating a new repository will open on the next step. Fill out the
+Name field and make sure the repository is public, then click
+`«Create repository from template»` button.
 
 ![Creating repo from a template step 2](./assets/template-step-2.png)
 
-Odată ce repository-ul a fost creat, trebuie să accesezi setările repository-ului creat în fila `Settings > Actions > General`, după cum se prezintă în imagine.
+You now have a personal project repository, having a repository-template file
+and folder structure. After that, you can work with it as you would with any
+other private repository: clone it on your computer, write code, commit, and
+send it to GitHub.
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+## Preparing for coding
 
-După ce ai derulat până la sfârșitul paginii, în secțiunea `Workflow permissions`, selectează `Read and write permissions`, (Permisiuni de citire și scriere) și bifează caseta. Acest lucru
-este necesar pentru a automatiza procesul de lansare a proiectului.
-
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
-
-Avei acum un repository personal de proiecte, cu o structură de fișiere și foldere.
-
-Lucrează apoi cu acesta așa cum ai face-o cu orice alt repository personal,
-clonează-l pe computerul tău, scrie cod, confirmă-l și încarcă-l pe
-GitHub.
-
-## Pregătirea pentru muncă
-
-1. Asigură-te că ai versiunea LTS a Node.js instalată pe computerul personal.
-   [Descarcă și instalează](https://nodejs.org/en/) dacă este necesar.
-2. Instalează dependențele de bază ale proiectului cu comanda `npm install`.
-3. Pornește modul de dezvoltare utilizând comanda `npm start`.
-4. Accesează [http://localhost:3000](http://localhost:3000) în browser-ul tău.
-   Această pagină se va reîncărca automat după salvarea modificărilor în fișierele proiectului.
+1. Make sure you have an LTS version of Node.js installed on your computer.
+   [Download and install](https://nodejs.org/en/) if needed.
+2. Install the project's base dependencies with the `npm install` command.
+3. Start development mode by running the `npm start` command.
+4. Go to [http://localhost:3000](http://localhost:3000) in your browser. This
+   page will automatically reload after saving changes to the project files.
 
 ## Deploy
 
-Versiunea de producție a proiectului va trece automat prin procesul de linting, va fi asamblată și implementată pe GitHub Pages, în ramura `gh-pages`, de fiecare dată când ramura `main` este actualizată. De exemplu, după un push direct sau o cerere de pull-request acceptată. 
+The production version of the project will automatically be linted, built, and
+deployed to GitHub Pages, in the `gh-pages` branch, every time the `main` branch
+is updated. For example, after a direct push or an accepted pull request. To do
+this, you need to edit the `homepage` field in the `package.json` file,
+replacing `your_username` and `your_repo_name` with your own, and submit the
+changes to GitHub.
 
-Pentru a face acest lucru, trebuie să editeezi câmpul "homepage" din fișierul package.json, înlocuind "your_username" și "your_repo_name" cu detaliile tale, apoi să trimiți aceste modificări pe GitHub.
-
-json
+```json
 "homepage": "https://your_username.github.io/your_repo_name/"
+```
 
-În continuare, mergi la setările repository-ului GitHub (`Settings` > `Pages`) și setează distribuirea versiunii de producție a fișierelor în folderul `/root` al ramurii `gh-pages`, dacă acest lucru nu a fost făcut în mod automat.
+Next, you need to go to the settings of the GitHub repository (`Settings` >
+`Pages`) and set the distribution of the production version of files from the
+`/root` folder of the `gh-pages` branch, if this was not done automatically.
 
 ![GitHub Pages settings](./assets/repo-settings.png)
 
 ### Deployment status
 
-Starea de implementare a celui mai recent commit este afișat printr-o iconiță lângă ID-ului acestuia.
+The deployment status of the latest commit is displayed with an icon next to its
+ID.
 
-- **Galben** - proiectul este în curs de asamblare și de implementare.
-- **Verde** - implementarea a fost finalizată cu succes.
-- **Roșu** - a apărut o eroare în timpul procesului de linting, asamblării sau implementării.
+- **Yellow color** - the project is being built and deployed.
+- **Green color** - deployment completed successfully.
+- **Red color** - an error occurred during linting, build or deployment.
 
-Pentru a obține informații mai detaliate despre starea implementării, poți da click pe iconița corespunzătoare și apoi accesează link-ul "Details" din fereastra pop-up care se deschide.
+More detailed information about the status can be viewed by clicking on the
+icon, and in the drop-down window, follow the link `Details`.
 
 ![Deployment status](./assets/deploy-status.png)
 
-### Pagina live
+### Live page
 
-După un anumit interval de timp, de obicei câteva minute, poți vizualiza pagina live la adresa indicată în proprietatea "homepage" editată. De exemplu, iată un link către versiunea live pentru acest repository:
+After some time, usually a couple of minutes, the live page can be viewed at the
+address specified in the edited `homepage` property. For example, here is a link
+to a live version for this repository
 [https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
 
-Dacă se deschide o pagină goală, asigură-te că în fila "Console" nu există erori legate de căi greșite către fișierele CSS și JS ale proiectului (**Eroare 404**). Cel mai probabil, valoarea proprietății "homepage" din fișierul package.json este incorectă.
+If a blank page opens, make sure there are no errors in the `Console` tab
+related to incorrect paths to the CSS and JS files of the project (**404**). You
+most likely have the wrong value for the `homepage` property in the
+`package.json` file.
 
-### Rutarea
+### Routing
 
-Dacă aplicația utilizează biblioteca react-router-dom pentru rutare,
-trebuie să configurezi suplimentar componenta `<BrowserRouter>`, trecând în prop-ul "basename" numele exact al repository-ului tău. Bara oblică la începutul șirului este obligatorie.
+If your application uses the `react-router-dom` library for routing, you must
+additionally configure the `<BrowserRouter>` component by passing the exact name
+of your repository in the `basename` prop. Slashes at the beginning and end of
+the line are required.
 
-jsx
-<BrowserRouter basename="/your_repo_name">
+```jsx
+<BrowserRouter basename="/your_repo_name/">
   <App />
 </BrowserRouter>
+```
 
-
-## Cum funcționează
+## How it works
 
 ![How it works](./assets/how-it-works.png)
 
-1. După fiecare "push" în ramura `main` a repository-ului GitHub, se va crea un fișier special script (GitHub Action) din fișierul `.github/workflows/deploy.yml`.
-2. Toate fișierele din repository sunt copiate pe server, unde proiectul este inițializat, este efectuat linting-ul și asamblarea înainte de implementare.
-3. Dacă toți pașii sunt finalizați cu succes, versiunea asamblată în producție a fișierelor proiectului este trimisă în ramura `gh-pages`. În caz contrar, în jurnalul (log) de execuție al scriptului vor fi indicate problemele întâlnite.
+1. After each push to the `main` branch of the GitHub repository, a special
+   script (GitHub Action) is launched from the `.github/workflows/deploy.yml`
+   file.
+2. All repository files are copied to the server, where the project is
+   initialized and linted and built before deployment.
+3. If all steps are successful, the built production version of the project
+   files is sent to the `gh-pages` branch. Otherwise, the script execution log
+   will indicate what the problem is.
